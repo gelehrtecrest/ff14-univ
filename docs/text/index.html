@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>過去の講義資料.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E9%81%8E%E5%8E%BB%E3%81%AE%E8%AC%9B%E7%BE%A9%E8%B3%87%E6%96%99">過去の講義資料</h1>
+<h2 id="%E4%B8%80%E8%88%AC%E8%AC%9B%E7%BE%A9">一般講義</h2>
+<ul>
+<li><a href="./01.html">鉱物学入門１, 鉱物学入門２, 鉱物学入門３, 鉱物学入門Ⅲ～ホンモノとニセモノ～</a></li>
+<li><a href="./02.html">農学講座とエオルゼア大学</a></li>
+<li><a href="./03.html">西洋哲学史講座</a></li>
+<li><a href="./04.html">自然言語処理序論, 自然言語処理序論II, 自然言語処理序論III</a></li>
+<li><a href="./05.html">印刷の基礎技術とその歴史, 色彩の「し」の話 ～RGB と CMYK～, 一冊の本ができるまで</a></li>
+<li><a href="./07.html">リアルクラフター【革細工師の場合】</a></li>
+<li><a href="./08.html">公衆衛生学概論, 食中毒, 消毒</a></li>
+<li><a href="./09.html">モンゴルに学ぶアジムステップ民族誌</a></li>
+<li><a href="./10.html">毛髪科学と界面活性剤の基本的性質・種類</a></li>
+<li><a href="./11.html">糖類のお話 論文のジャーナルについて</a></li>
+<li><a href="./12.html">恋にも仕事にも使える！ コミュニケーション</a></li>
+<li><a href="./13.html">酪農の現場と最新設備</a></li>
+<li><a href="./14.html">FF14と歴史学</a></li>
+<li><a href="./15.html">音楽理論 初級編＆中級編１</a></li>
+<li><a href="./16.html">歯科学総論/お口の美容と健康</a></li>
+<li><a href="./17.html">意外と知らないお天気用語入門編</a></li>
+<li><a href="./18.html">ドマ式麻雀の為の初心者向け麻雀講座</a></li>
+<li><a href="./19.html">第1回エオルゼア大学フォーラム「過疎化の現状」「????」</a></li>
+<li><a href="./20.html">はじめてでもよくわかる のりもの の しくみ 【でんしゃ】</a></li>
+<li><a href="./21.html">「ことば」で読み解くアジムステップ</a></li>
+<li><a href="./22.html">J・マクタガート時間論</a></li>
+<li><a href="./23.html">予防接種, 遺伝子ワクチン</a></li>
+<li><a href="./24.html">極・部屋探し攻略</a></li>
+<li><a href="./25.html">IPS細胞</a></li>
+<li><a href="./26.html">感度・特異度</a></li>
+<li><a href="./27.html">数秘術に触れてみよう</a></li>
+<li><a href="./28.html">医療人になるためには</a></li>
+<li><a href="./29.html">Webサイトの作り方・依頼の仕方</a></li>
+<li><a href="./30.html">シャンプートリートメントの中身と使い方</a></li>
+<li><a href="./31.html">ラノシア岩石とリムサ様式の建築</a></li>
+<li><a href="./32.html">発掘入門 ～歴史、考古、そして地文学へ～</a></li>
+<li><a href="./33.html">統計調査の手法について</a></li>
+</ul>
+<h2 id="%E4%B8%80%E8%88%AC%E8%AC%9B%E7%BE%A9%E8%AC%9B%E7%BE%A9%E8%B3%87%E6%96%99%E3%81%AA%E3%81%97">一般講義^(講義資料なし^)</h2>
+<ul>
+<li><a href="./a01.html">LRSから見たエヴァFF史</a></li>
+<li><a href="./a02.html">ロックの歴史</a></li>
+<li><a href="./a03.html">トランスポート</a></li>
+<li><a href="./a04.html">バカでもできた舞台演劇</a></li>
+<li><a href="./a05.html">乳酸菌と学ぶ虫歯</a></li>
+<li><a href="./a06.html">舞台照明</a></li>
+<li><a href="./a07.html">エルカ5選！日本人が作ったすご～い発明品！, </a></li>
+<li><a href="a08.html">悪質転売ヤーがいけない理由</a></li>
+</ul>
+<h2 id="%E5%AD%A6%E5%95%8F%E3%81%8B%E3%82%89%E8%A6%8B%E3%82%8Bff14%E3%81%AE%E4%B8%96%E7%95%8C">学問から見るFF14の世界</h2>
+<ul>
+<li><a href="e01.html">媒体と技術から見るエオルゼア</a></li>
+<li><a href="e02.html">言語学から見る古代ロンカ語の言語獲得</a></li>
+</ul>
+
+</body>
+</html>
