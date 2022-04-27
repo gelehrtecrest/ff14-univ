@@ -42,6 +42,7 @@
 - [エルカ5選！日本人が作ったすご～い発明品！, ](./TeacherMomoi.html)
 - [悪質転売ヤーがいけない理由](./TeacherMomoi.html)
 - [部屋とTシャツとメタル  〜ヘビメタじゃないよメタルやねん〜](./alice.html)
+- [エオルゼア落語秘話](./KShirahime.html)
 
 ## 学問から見るFF14の世界
 - [FF14と歴史学](./e01.html)
